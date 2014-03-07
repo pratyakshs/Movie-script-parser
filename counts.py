@@ -9,5 +9,5 @@ for w in words:
 	word_counts[w] = words_mulset.count(w)
 
 import operator
-sorted_words = sorted(word_counts.items(), key = lambda word_counts: -word_counts[1])
+sorted_words = sorted(word_counts.items(), key = lambda word_counts: word_counts[1])
 
