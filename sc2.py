@@ -26,5 +26,5 @@ for line in lines:
 		chars2.add(line)
 print(chars)
 print(len(chars))
-print(chars2)
-print(len(chars2))
+#print(chars2)
+#print(len(chars2))
