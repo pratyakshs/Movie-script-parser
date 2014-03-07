@@ -34,11 +34,24 @@ gender = dict()
 for char in charlist:
 	m, f, p = 0, 0, 0 
 	for i in range(len(lines)):
-		if re.search(char, lines[i], re.I):
-			for k in range(4):
+		srch = re.search(char, lines[i], re.I)
+		if not srch:
+			continue
+		if srch.group().isupper():
+			continue
+		else:
+			k, k_range = -1, 2
+			while k + i + 1 < len(lines):
+				k = k + 1
 				m = m + len(re.findall("\s+he", lines[k+i], re.I)) + len(re.findall("\s+him", lines[k+i], re.I))
 				f = f + len(re.findall("\s+she", lines[k+i], re.I)) + len(re.findall("\s+her", lines[k+i], re.I))
-			for k in range(4):
+				if lines[k+i].isupper():
+					break
+				if k >= k_range:
+					break
+			k, k_range = -1, 4
+			while k + i + 1 < len(lines):
+				k = k + 1
 				m1, m2, m3, m4 = re.search("\s+he", lines[k+i], re.I), re.search("\s+him", lines[k+i], re.I), re.search("\s+she", lines[k+i], re.I), re.search("\s+her", lines[k+i], re.I)
 				if m1:
 					if m2:
@@ -62,22 +75,25 @@ for char in charlist:
 					else:
 						p = 1
 					break
-
-
-			
+				if lines[k+i].isupper():
+					break
+				if k >= k_range:
+					break
 	gender[char] = m, f, p
 
 for char, g in gender.items():
-	g_score = 2*g[1] - g[0]
+	g_score = 2.1*g[1] - g[0]
 	g_sum = g[1]+g[0]
 	if g[2] == 0:
-		g_score = g_score - g_sum/4
+		g_score = g_score - g_sum/10
 	else:
-		g_score = g_score + g_sum/4
-	if g_score > 0:
-		print(char+" female")
+		g_score = g_score + g_sum/10
+	if (g_sum == 0.0) or (0 == 1):
+		print(char+" Undetermined")
+	elif g_score > 0:
+		print(char+" Female"+str(g[0])+","+str(g[1])+","+str(g[2])+","+str(g_score))
 	else:
-		print(char+" male")
+		print(char+" Male"+str(g[0])+","+str(g[1])+","+str(g[2])+","+str(g_score))
 
 
 
