@@ -1,0 +1,44 @@
+CS 296 lab Group 9 
+
+LAB 8
+
+1) Sanket Kanjalkar 120050011
+2) Pratyaksh Sharma 120050019
+3) Shrish kumarNamdeo 110050040
+
+All the work for this assignment has been done by us and we have not
+ plagiarized it from anywhere.
+
+
+About our code:
+
+For character recognition
+
+1) The character which converses a dailiuge is considerd a character. 
+2) A string is considered a character if 
+a) The line which it is contained in is all upper case and
+b) The line does not contain EXT. or INT. keywords
+c) The punctuations if attached to any characters are removed and every character count is calculated.
+d) It occurs more than4 times
+
+ 
+For recoginsing the genre the following sceme has been implemeted:
+1) Words are learnt from various movies of a specific genre and 
+and stored in a file [genre-name].txt
+2) For more clarity in genre recognistion weights have been alloted to 
+	every word of every genre which serves in classification.
+For example : blood has lesser weight in horror genre than zombies and ghosts .etc
+3) After the wrights are allocated, the file is checked for occurances 
+	of the particular word and sum of all weights of all words servers as the 
+	measure of score of genre for a particular movie.
+4) After every score has been calculated , if a score takes more than 20%
+of the total score than it is considered the movie of the particular genre
+5) For action score the boundary is 25 % , since words like battle,war occur in almost all movies.
+ 
+
+Sources :
+1) http://docs.python.org/3/tutorial/
+2) http://learnpythonthehardway.org/book/
+ 
+
+ 

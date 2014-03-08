@@ -1,0 +1,11 @@
+planes 1
+robots 5
+aliens 5
+space 3
+galaxy 3
+Experiment 2
+Star 3
+planets 4
+planet 3
+Meteors 5
+Vacuum 3

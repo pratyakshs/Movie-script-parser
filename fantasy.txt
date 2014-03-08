@@ -1,0 +1,30 @@
+Abnormal 2
+Adventure 2
+Apparition 5
+Bizarre 4
+Brownies 4
+Crystal ball 10
+Curse 4
+Dragon 5
+Dream 5
+Elf 3
+fairy 3
+Fairy tale 10
+Fantastic 10
+Fantasy 10
+Fascination 5 
+Imaginary 5
+Magic 10
+Magic carpet 10
+Magical 10
+Miracle 10
+Potion 5
+Sorcerer 5 
+Sorcery 5
+Spell 5
+Spirits 5
+Supernatural 5
+Transform 10
+Unicorn 5
+Wand 5
+Witch 5

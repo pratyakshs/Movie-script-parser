@@ -1,0 +1,11 @@
+daddy 1
+colonel 1
+jury 1
+judje 1
+king 1
+queen 1 
+emotion 2
+cry 2
+weep 2
+breakup 2 
+drama 2
